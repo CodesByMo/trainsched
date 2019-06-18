@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="titleBlock">
+        <h1>COLE TRAIN BABY</h1>
+        <h4>Marcus Fenix ain't got SHIT on me.</h4>
+      </div>
+      <div id="mainContent">
+        <div id="currentTrains">
+          <div class="row, heading"><p>Current Trains</p></div>
+          <!-- add trains -->
+          <table class="table">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Train</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">Next Arrival</th>
+
+              </tr>
+            </thead>
+            <tbody id="trainBody">
+              <tr id="trainInfo">
+                <!-- <th scope="row">1</th> -->
+                <td>Denver Rider</td>
+                <td>Ottowa</td>
+                <td>10 minutes</td>
+                <td>10:34</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+          <div class="row, TrainDisplay">
+            <!-- <div class="row"><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div> -->
+            <ul class="list-group list-group-flush"></ul>
+          </div>
+                        <div class="row" id="addTrain">
+                <div class="heading w-100">Add Train</div>
+
+                    <div class="definingText">Train Name</div>
+                    <div class="input-group mb-3 ">
+                        <input  id="addTrainName" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+
+                      <div class="definingText">Destination</div>
+                      <div class="input-group mb-3">
+                        <input " id="trainDest" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+
+                      <div class="definingText">First Train Time (HH:mm - military time)</div>
+                      <div class="input-group mb-3">
+                        <input  id="trainTime" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+
+                      <div class="definingText">Frequency (min)</div>
+                      <div class="input-group mb-3">
+                        <input id="trainFreq" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+                      <button class="submitButton">Update</button>
+                      
+                </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- momentjs -->
+    <script src="./assets/moment.js"></script>
+
+    <!-- app script -->
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
