@@ -28,22 +28,6 @@ $(document).ready(function () {
 
     ;
 
-    // function populateTable() {
-    //     // clear table
-    //     $("#trainBody").empty();
-    //     // loop through data
-
-    //     // append <TR> to <TBODY>
-    //     $("#trainBody").append($("#addTrainName").val());
-    //     $("#trainBody").append($("#trainDest").val());
-    //     $("#trainBody").append($("#trainTime").val());
-    //     $("#trainBody").append("<td>" + frequency + "</td>");
-
-    // }
-
-    // use data to build info in database from input. 
-
-
     //////////////////////////////////////////////////////////////////
 
 
@@ -123,5 +107,38 @@ $(document).ready(function () {
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+
+
+    // use data to build info in database from input. 
+    // Using .on("value", function(snapshot)) syntax will retrieve the data
+    // from the database (both initially and every time something changes)
+    // This will then store the data inside the variable "snapshot". We could rename "snapshot" to anything.
+    database.ref().on("value", function (snapshot) {
+
+        // Then we console.log the value of snapshot
+        // console.log(snapshot.val());
+
+        var name = $("#addTrainName").val();
+        var destination = $("#trainDest").val();
+        var nextArrival = $("#trainTime").val();
+        var frequency = $("#trainFreq").val();
+
+        $("#trainBody").append("<td>" + name + "</td>");
+        $("#trainBody").append("<td>" + destination + "</td>");
+        $("#trainBody").append("<td>" + nextArrival + "</td>");
+        $("#trainBody").append("<td>" + frequency + "</td>");
+
+        // If there is an error that Firebase runs into -- it will be stored in the "errorObject"
+        // Again we could have named errorObject anything we wanted.
+        console.log(snapshot);
+
+    }, function (errorObject) {
+
+        // In case of error this will print the error
+        console.log("The read failed: " + errorObject.code);
+        database.ref().push(snapshot);
+
+    });
 
 })
