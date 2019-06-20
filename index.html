@@ -25,7 +25,7 @@
       </div>
       <div id="mainContent">
         <div id="currentTrains">
-          <div class="row, heading"><p>Current Trains</p></div>
+          <div class="row, heading" id="currentTrainText"><p>Current Trains</p></div>
           <!-- add trains -->
           <table class="table">
             <thead>
@@ -54,7 +54,7 @@
           <ul class="list-group list-group-flush"></ul>
         </div>
         <div class="row" id="addTrain">
-          <div class="heading w-100">Add A Train</div>
+          <div class="heading w-100" id="trainAddText">Add A Train</div>
 
           <div class="definingText">Train Name</div>
           <div class="input-group mb-3 ">
@@ -100,7 +100,10 @@
               aria-describedby="basic-addon2"
             />
           </div>
-          <button class="submitButton">Update</button>
+        </div>
+        <div class="row">
+          <button class="btn btn-dark col-2" id="submitButton">Update</button>
+
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 body{
-    background: grey;
+    background-image: url(../assets/images/skull1.jpg);
+    background-size: 1920px 1080px;
 }
 .container{
     text-align:center;
@@ -25,15 +26,20 @@ body{
 #currentTrains{
     border:2px solid black;
     background: white;
+    opacity: 0.8;
+
 }
 .definingText{
     margin-left: 10px;
+    font-weight: 500;
 }
 #addTrain{
     border:2px solid black;
     margin: 0 auto;
     margin-top: 10px;
     background: white;
+    opacity: 0.8;
+
 
 }
 
@@ -41,3 +47,14 @@ h1{
     margin-left: 25px;
 }
 
+#trainAddText, #currentTrainText {
+    background-color: grey;
+    font-weight: bold;
+}
+
+#submitButton{
+    /* opacity: 1; */
+    margin-top: 10px;
+    margin-left: 40%;
+    font-weight: bold;
+}
