@@ -16,8 +16,12 @@
   <body>
     <div class="container">
       <div id="titleBlock">
-        <h1>COLE TRAIN BABY</h1>
-        <h4>Marcus Fenix ain't got SHIT on me.</h4>
+        <div class="row">
+          <h1>COLE TRAIN, BABY</h1>
+        </div>
+        <div class="row">
+          <h4>Marcus Fenix ain't got SHIT on me.</h4>
+        </div>
       </div>
       <div id="mainContent">
         <div id="currentTrains">
@@ -31,51 +35,73 @@
                 <th scope="col">Destination</th>
                 <th scope="col">Frequency</th>
                 <th scope="col">Next Arrival</th>
-
               </tr>
             </thead>
             <tbody id="trainBody">
-              <tr id="trainInfo">
-                <!-- <th scope="row">1</th> -->
-                <!-- <td>Denver Rider</td>
+              <!-- <tr id="trainInfo"> -->
+              <!-- <th scope="row">1</th> -->
+              <!-- <td>Denver Rider</td>
                 <td>Ottowa</td>
                 <td>10 minutes</td>
                 <td>10:34</td> -->
-              </tr>
-
+              <!-- </tr> -->
             </tbody>
           </table>
         </div>
 
-          <div class="row, TrainDisplay">
-            <!-- <div class="row"><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div> -->
-            <ul class="list-group list-group-flush"></ul>
+        <div class="row, TrainDisplay">
+          <!-- <div class="row"><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div><div class="col-2"></div> -->
+          <ul class="list-group list-group-flush"></ul>
+        </div>
+        <div class="row" id="addTrain">
+          <div class="heading w-100">Add A Train</div>
+
+          <div class="definingText">Train Name</div>
+          <div class="input-group mb-3 ">
+            <input
+              id="addTrainName"
+              type="text"
+              class="form-control"
+              placeholder="Train Name"
+              aria-label="Train Name"
+              aria-describedby="basic-addon2"
+            />
           </div>
-                        <div class="row" id="addTrain">
-                <div class="heading w-100">Add Train</div>
 
-                    <div class="definingText">Train Name</div>
-                    <div class="input-group mb-3 ">
-                        <input  id="addTrainName" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      </div>
+          <div class="definingText">Destination</div>
+          <div class="input-group mb-3">
+            <input " id="trainDest" type="text" class="form-control"
+            placeholder="Train Destintion" aria-label="Train Destintion"
+            aria-describedby="basic-addon2">
+          </div>
 
-                      <div class="definingText">Destination</div>
-                      <div class="input-group mb-3">
-                        <input " id="trainDest" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      </div>
+          <div class="definingText">
+            First Train Time (HH:mm - military time)
+          </div>
+          <div class="input-group mb-3">
+            <input
+              id="trainTime"
+              type="text"
+              class="form-control"
+              placeholder="Train Time"
+              aria-label="Train Time"
+              aria-describedby="basic-addon2"
+            />
+          </div>
 
-                      <div class="definingText">First Train Time (HH:mm - military time)</div>
-                      <div class="input-group mb-3">
-                        <input  id="trainTime" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      </div>
-
-                      <div class="definingText">Frequency (min)</div>
-                      <div class="input-group mb-3">
-                        <input id="trainFreq" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      </div>
-                      <button class="submitButton">Update</button>
-                      
-                </div>
+          <div class="definingText">Frequency (min)</div>
+          <div class="input-group mb-3">
+            <input
+              id="trainFreq"
+              type="text"
+              class="form-control"
+              placeholder="Arrival Frequency"
+              aria-label="Arrival Frequency"
+              aria-describedby="basic-addon2"
+            />
+          </div>
+          <button class="submitButton">Update</button>
+        </div>
       </div>
     </div>
     <!-- jQuery -->

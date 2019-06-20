@@ -1,22 +1,43 @@
+body{
+    background: grey;
+}
+.container{
+    text-align:center;
+    color: black;
+    /* background:black; */
+    /* background-image: url(../assets/images/coletrain.jpg); */
+    padding-top: 20px;
+}
+
 #titleBlock{
     text-align:center;
     color:white;
-    background:black;
+    /* background:black; */
+    background-image: url(../assets/images/coletrain.jpg);
     padding: 60px;
 }
 #mainContent{
-    /* margin:10px auto; */
+    margin:10px auto;
 }
 .trainDisplay{
-    /* margin:0px auto */
+    margin:0px auto
 }
 #currentTrains{
     border:2px solid black;
+    background: white;
 }
 .definingText{
-    width:100%;
+    margin-left: 10px;
 }
 #addTrain{
     border:2px solid black;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: white;
 
 }
+
+h1{
+    margin-left: 25px;
+}
+
